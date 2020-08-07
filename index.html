@@ -1,31 +1,292 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-    <title>J124 Final Project</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div id="input" class="col-12 col-md-10"></div>
+<!DOCTYPE html>
+<html>
+    
+    <!-- none of this is mobile friendly yet I think -->
+<head>x
+    <title>College Students and COVID-19</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- on the left ones we had  margin-left: 5%; right was margin-right: 5%; -->
+    <style>
+
+    #top-left, #top-right {
+       
+        overflow: hidden;
+        max-height: 290px
+    }
+        
+        .squares {
+            margin-top: 0px;
+            border-top: 0px;
+            padding-top: 0px
+        }
+        
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style> 
+    
+    
+</head>
+<!-- need some more stuff in the head, a starting body tag-->
+<body class="w3-content" style="max-width: none">
+    
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <!-- Avatar image in top left corner -->
+  <img src="https://yt3.ggpht.com/-cinYIty55o4/AAAAAAAAAAI/AAAAAAAAAAA/fksyD1mnnBw/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" style="width:100%">
+  <a href="#top-row" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>SQUARE #</p>
+  </a>
+  <a href="#row-two" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>SQUARE #</p>
+  </a>
+  <a href="#row-three" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>SQUARE #</p>
+  </a>
+  <a href="#row-four" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>SUQARE #</p>
+  </a>
+    <a href="#row-five" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>SUQARE #</p>
+  </a><a href="#row-six" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>SUQARE #</p>
+  </a>
+</nav> 
+    
+    <div class="nav-func">
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+    </div>
+    
+<div class="squares">
+      <!-- First Grid: Logo & About FROM 5050 -->
+<div class="w3-row" id="top-row">
+  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Square 1</h1>
+    </div>
+    <div class="w3-padding-64">
+     <!-- there was some nav stuff here if you want to re-add it from 5050, see 3nd of doc --> 
+    </div>
+  </div>
+  <div class="w3-half w3-blue-grey w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h1>Square 2</h1>
+      <img src="https://i.dailymail.co.uk/i/pix/2012/11/19/article-2235202-0D1ABEFA00000578-242_1024x615_large.jpg" class="w3-margin w3-circle" alt="Picture" style="width:50%">
+      <div class="w3-left-align w3-padding-large">
+        <p>Lorem ipusm sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-      jQuery(document).ready(function($){          
-        $.ajax({
-           url: 'README.md',
-           dataType: 'text'
-        }).done(function(d){
-            $('#input').html(marked(d));
-            $('img').addClass('img-fluid d-block');
-        }).fail(function(d){
-            console.log(d);
-        });
-      });
-    </script>
-  </body>
-</html>
+  </div>
+</div>
+
+    <!-- put a margin w titile here?-->
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row" id="row-two">
+  <div class="w3-half w3-light-grey w3-center" style="height: 900px" id="work">
+    <div class="w3-padding-64">
+      <h2>Square 3</h2>
+      <p>Some content</p>
+    </div>
+    <div class="w3-row">
+      <div class="w3-half" id="top-left">
+        <img src="https://xiliumvirtual.com/wp-content/uploads/2015/07/content.jpg" style="width:100%">
+      </div>
+      <div class="w3-half" id="top-right">
+        <img src="https://www.corelogic.com.au/sites/default/files/2018-04/1200px-800px--content.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="w3-row w3-hide-small" id="bottom-left">
+      <div class="w3-half">
+        <img src="https://marketingland.com/wp-content/ml-loads/2015/02/content-marketing-box-ss-1920.jpg" style="width:100%">
+      </div>
+      <div class="w3-half" id="bottom-right">
+        <img src="https://marketingland.com/wp-content/ml-loads/2015/11/content-marketing-idea-lightbulb-ss-1920.jpg" style="width:100%">
+      </div>
+    </div>
+    <br>
+    <p>Lorem ipsum sed vitae justo condimentum</p>
+  </div>
+ <!-- height of the bo above needs to match height of the box below -->   
+  <div class="w3-half w3-indigo w3-container" style="height:900px">
+    <div class="w3-padding-64 w3-center">
+      <h2>Square 4</h2>
+      <p>Content</p>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>Lorem</th>
+            <th>Lorem</th>
+            <th>Lorem</th>
+          </tr>
+          <tr class="w3-white">
+            <td>####</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+          </tr>
+          <tr>
+            <td>####</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+          </tr>
+          <tr class="w3-white">
+            <td>####</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+          </tr>
+          <tr>
+            <td>####</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+          </tr>
+          <tr class="w3-white">
+            <td>####</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+          </tr>
+          <tr class="w3-hide-medium">
+            <td>####</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>    
+    
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="row-three" id="contact">
+  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Square 5</h1>
+    </div>
+    <div class="w3-padding-64">
+      <p>Lorem</p>
+      <p>Lorem ipsum</p>
+      <p>Lorem ipsum</p>
+      <p>Lorem</p>
+    </div>
+  </div>
+  <div class="w3-half w3-teal w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-large">
+      <h1>Square 6</h1>
+      <p class="w3-opacity">LOREM IPSUM</p>
+      <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Name">
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Email">
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Message">
+        </div>
+        <button type="submit" class="w3-button w3-teal w3-right">Send</button>
+      </form>
+    </div>
+  </div>
+</div>   
+    <!-- Fourth Grid: Swing By & Contact -->
+<div class="w3-row" id="row-four" id="contact">
+  <div class="w3-half w3-deep-purple w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Square #</h1>
+    </div>
+  </div>
+  <div class="w3-half w3-yellow w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-large">
+      <h1>Square #</h1>
+    </div>
+  </div>
+</div>
+
+    <div class="w3-row" id= "row-five" id="contact">
+  <div class="w3-half w3-lime w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Square #</h1>
+    </div>
+  </div>
+  <div class="w3-half w3-amber w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-large">
+      <h1>Square #</h1>
+    </div>
+  </div>
+</div>
+    
+    <div class="w3-row" id= "row-six" id="contact">
+  <div class="w3-half w3-aqua w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>Square #</h1>
+    </div>
+  </div>
+  <div class="w3-half w3-green w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-large">
+      <h1>Square #</h1>
+    </div>
+  </div>
+</div>
+  </div>  
+<footer class="w3-container w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html> 
